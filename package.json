@@ -1,0 +1,19 @@
+{
+  "name": "delivery_company",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "handlebars": "^4.7.8",
+    "hbs": "^4.2.0"
+  }
+}

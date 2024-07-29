@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Login</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container main">
+            <div class="row">
+                <div class="col-md-6 side-image1">
+                    
+                </div>
+                <div class="col-md-6 right">
+                    <div class="input-box">
+                        <h1 style="text-align:center;">SwiftShip</h1>
+                        <header style="align-items: center;">Delivery Log in</header>
+                        <form action="/adminlogin" method="POST">
+                            <div class="input-field">
+                                <input type="text" class="input" name="email" required="" autocomplete="off">
+                                <label for="email">Email</label> 
+                            </div> 
+                            <div class="input-field">
+                                <input type="password" class="input" name="password" required="">
+                                <label for="password">Password</label>
+                            </div> 
+                            <div class="input-field">
+                                <input type="submit" class="submit" value="Log In">
+                            </div>
+                        </form>
+                        <div class="adminsignin">
+                            <span>Are you an Admin<a href="/adminlogin"> Log in here</a></span>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

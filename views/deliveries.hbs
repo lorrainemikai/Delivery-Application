@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Deliveries</title>
+    <style>
+         #hero {
+            background-image: url('logistics.jpg');
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 300px;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+        }
+        h1 {
+            font-size: 36px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+     <div class="banner">
+    <section id="hero" style="background-image: url('/public/images/deliveries.jpg'); background-size: cover; background-size: cover;background-position: center;width: 100%;height: 300px;color: #fff; text-align: center; padding: 100px 0;">
+        <h1 style="font-size: 36px; text-align: center;">SwiftShip</h1>
+        <p style="text-align: center; color: rgb(0, 255, 255);">Dedicated to Delivering with Care</p>
+        
+        
+    </section>
+    </div>
+
+    <div class="bg-zinc-100 dark:bg-zinc-800 min-h-screen flex flex-col items-center justify-center">
+        <h1 class="text-2xl font-bold mb-4 text-center">Deliveries</h1>
+        <div class="row">
+            <div class="col-md-8 order-list-container">
+                <h2>Order List</h2>
+                {{#if deliveries.length}}
+                    <ul class="list-group">
+                        {{#each deliveries}}
+                            {{#if (eq assignedTo ../session.user.id)}}
+                                <li class="list-group-item">
+                                    <h5>Order Number: {{this.orderNumber}}</h5>
+                                    <p>Customer Name: {{this.customerName}}</p>
+                                    <p>Phone Number: {{this.phoneNumber}}</p>
+                                    <p>Location: {{this.location}}</p>
+                                    <p>Items: {{this.items}}</p>
+                                    <form action="/update-delivery-status" method="POST">
+                                        <input type="hidden" name="orderId" value="{{this.id}}">
+                                        <button type="submit" name="status" value="delivered" class="btn btn-success">Delivered</button>
+                                        <button type="submit" name="status" value="not_delivered" class="btn btn-danger">Not Delivered</button>
+                                    </form>
+                                </li>
+                            {{/if}}
+                        {{/each}}
+                    </ul>
+                {{else}}
+                    <p>No orders found.</p>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+    <form action="/logout" method="POST" style="position: fixed; bottom: 10px; right: 10px;">
+        <button type="submit" class="btn btn-danger">Logout</button>
+    </form>
+</body>
+</html>

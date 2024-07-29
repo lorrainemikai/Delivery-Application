@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "orderNumber": "1",
+    "customerName": "Pauline Mautia",
+    "phoneNumber": "0115683203",
+    "location": "Mtwapa",
+    "items": [
+      "Flowers"
+    ],
+    "totalPrice": "2500",
+    "assignedTo": "2",
+    "status": "delivered"
+  },
+  {
+    "id": 2,
+    "orderNumber": "2",
+    "customerName": "Mark Githae",
+    "phoneNumber": "0789234567",
+    "location": "CleanShelf, Rongai",
+    "items": [
+      "Cooking Appliances"
+    ],
+    "totalPrice": "16782",
+    "assignedTo": "3",
+    "status": "delivered"
+  },
+  {
+    "id": 3,
+    "orderNumber": "3",
+    "customerName": "Melany Kendi",
+    "phoneNumber": "0114690112",
+    "location": "Kahawa Wendani",
+    "items": [
+      "Beauty Products"
+    ],
+    "totalPrice": "5634",
+    "assignedTo": "2",
+    "status": "not_delivered"
+  },
+  {
+    "id": 4,
+    "orderNumber": "4",
+    "customerName": "Stacy Muvoye",
+    "phoneNumber": "0721983765",
+    "location": "Kasarani",
+    "items": [
+      "Pet Supplies"
+    ],
+    "totalPrice": "23500",
+    "assignedTo": "2",
+    "status": "delivered"
+  },
+  {
+    "id": 5,
+    "orderNumber": "5",
+    "customerName": "Ian Ng'ang'a",
+    "phoneNumber": "0116723503",
+    "location": "Kileleshwa",
+    "items": [
+      "Electronics"
+    ],
+    "totalPrice": "6780",
+    "assignedTo": "3",
+    "status": "delivered"
+  }
+]

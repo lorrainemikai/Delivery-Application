@@ -1,0 +1,264 @@
+/* Custom styles for your application */
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    height: 700px;
+    display: flex;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.col-md-6 {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.side-image1 {
+    background: url('/public/images/delivery.jpg') center center/cover no-repeat;
+    display: flex; /* Ensures container can hold flex children */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+}
+.side-image1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill; /* Ensures the image covers the container without distortion */
+    object-position:fill; /* Centers the image */
+}
+
+.side-image2 {
+    background: url('/public/images/swift.png') center center/cover no-repeat;
+    display: flex; /* Ensures container can hold flex children */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+}
+
+.side-image2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    object-position: center; /* Centers the image */
+}
+
+.right {
+    background: #fff;
+}
+
+.input-box {
+    width: 100%;
+    max-width: 450px;
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.input-field {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 10px;
+    background: none;
+    border: 1px solid #ccc;
+    outline: none;
+    color: #333;
+}
+
+.input-field label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    pointer-events: none;
+    color: #aaa;
+    transition: 0.5s;
+}
+
+.input-field input:focus + label,
+.input-field input:valid + label {
+    top: -20px;
+    left: 10px;
+    color: #333;
+    font-size: 12px;
+}
+
+.submit {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #000000;
+    color: #00ccff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit:hover {
+    background: #00e1ff;
+}
+
+.adminsignin {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.adminsignin span {
+    color: #333;
+}
+
+.adminsignin a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.adminsignin a:hover {
+    text-decoration: underline;
+}
+
+.order-form-container {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-list-container {
+    margin-left: 20px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+/* Center the <h2> within the table */
+.table-title {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.nav-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-item a:hover {
+    text-decoration: underline;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
